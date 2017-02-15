@@ -1,0 +1,19 @@
+Notes on branching
+
+Check your current branch:
+	git status
+
+Create a new branch:
+	git branch branchName
+
+switch to your new branch:
+	git checkout branchName
+
+commiting the changes to your branch:
+	git add *
+	git commit -m "These new files will now 'stick' to this new branch" 
+
+At this point you can start to modify and add files to your workign directory. Any changes pushed will be applied to your new branch.
+You may toggle back to the master branch with git checkout master. The original state of files in your working directory will be updated to match that of master. You can then toggle back to your new branch with git checkout branchName and your new/ update files will be restored. 
+
+	
