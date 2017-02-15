@@ -1,0 +1,44 @@
+Notes on branching
+
+Check your current branch:
+	git status
+
+Create a new branch:
+	git branch branchName
+
+switch to your new branch:
+	git checkout branchName
+
+commiting the changes to your branch:
+	git add *
+	git commit -m "These new files will now 'stick' to this new branch" 
+
+At this point you can start to modify and add files to your workign directory. Any changes pushed will be applied to your new branch.
+You may toggle back to the master branch with git checkout master. The original state of files in your working directory will be updated to match that of master. You can then toggle back to your new branch with git checkout branchName and your new/ update files will be restored. The files will ONLY stick to a branch after its been commited to it. If you dont commit the change, your new file will simple float in the working directory as you switch between branches.
+
+If you modify an existing file, and try switching banches before it has been commited (but while it has been added/ is being tracked) The branch switch will abort with an error warning at you un-commited changes would be overwritten by the switch. As such, any modifications to a file, must be commited before switching branches. With new files you can get away with toggleing branches while they 'float' in your local, but it may not be the best practice, as you could acidentaly commit them into a branch it wan not ment to go in yet. 
+
+
+Pushing new Branch to remote:
+	The first time you use a new branch and you want to push it, you must point it to its remote location.
+
+	To see the reomte branch on github.com, you must switch the branch dropdown, and enter the exact branch name in the seach bar.
+	It will not auto find it for you. Once you add it for the first time, it will be remembered in your dropdown list.
+
+	did the following:
+		git fetch
+		git branch --set-upstream-to=origin/branchMergingTest
+		(told it was setup to track remote branch)
+		git push
+		(told there was an issue with the defult behaviour- this was just a warning, still worked after entering credensials)
+
+
+Merging branch back with master
+	git checkout master
+	git merge branchMergingTest
+	git branch -d branchMergingTest
+
+	above switches back to the master branch, merges your test branch into it, and deletes the test branch, sicne we dont need it anymore
+		
+
+	
