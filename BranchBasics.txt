@@ -19,4 +19,23 @@ You may toggle back to the master branch with git checkout master. The original 
 If you modify an existing file, and try switching banches before it has been commited (but while it has been added/ is being tracked) The branch switch will abort with an error warning at you un-commited changes would be overwritten by the switch. As such, any modifications to a file, must be commited before switching branches. With new files you can get away with toggleing branches while they 'float' in your local, but it may not be the best practice, as you could acidentaly commit them into a branch it wan not ment to go in yet. 
 
 
+Pushing new Branch to remote:
+	The first time you use a new branch and you want to push it, you must point it to its remote location.
+
+	To see the reomte branch on github.com, you must switch the branch dropdown, and enter the exact branch name in the seach bar.
+	It will not auto find it for you. Once you add it for the first time, it will be remembered in your dropdown list.
+
+	
+
+
+	did the fllowing, but not sure if correct:
+		git fetch
+		git branch --set-upstream-to=origin/branchMergingTest
+		(told it was setup to track remote branch)
+		git push
+		(told there was an issu with the defult behaviour- checked github... dont see any updates)
+
+
+	
+
 	
