@@ -25,17 +25,23 @@ Pushing new Branch to remote:
 	To see the reomte branch on github.com, you must switch the branch dropdown, and enter the exact branch name in the seach bar.
 	It will not auto find it for you. Once you add it for the first time, it will be remembered in your dropdown list.
 
-	
 
-
-	did the fllowing, but not sure if correct:
+	did the following:
 		git fetch
 		git branch --set-upstream-to=origin/branchMergingTest
 		(told it was setup to track remote branch)
 		git push
-		(told there was an issu with the defult behaviour- checked github... dont see any updates)
+
+		(told there was an issue with the defult behaviour- this was just a warning, still worked after entering credensials)
 
 
-	
+Merging branch back with master
+	git checkout master
+	git merge branchMergingTest
+	git branch -d branchMergingTest
+
+	above switches back to the master branch, merges your test branch into it, and deletes the test branch, sicne we dont need it anymore
+		
+
 
 	
