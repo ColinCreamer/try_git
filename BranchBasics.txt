@@ -16,4 +16,7 @@ commiting the changes to your branch:
 At this point you can start to modify and add files to your workign directory. Any changes pushed will be applied to your new branch.
 You may toggle back to the master branch with git checkout master. The original state of files in your working directory will be updated to match that of master. You can then toggle back to your new branch with git checkout branchName and your new/ update files will be restored. The files will ONLY stick to a branch after its been commited to it. If you dont commit the change, your new file will simple float in the working directory as you switch between branches.
 
+If you modify an existing file, and try switching banches before it has been commited (but while it has been added/ is being tracked) The branch switch will abort with an error warning at you un-commited changes would be overwritten by the switch. As such, any modifications to a file, must be commited before switching branches. With new files you can get away with toggleing branches while they 'float' in your local, but it may not be the best practice, as you could acidentaly commit them into a branch it wan not ment to go in yet. 
+
+
 	
