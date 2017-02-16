@@ -1,0 +1,1 @@
+Testing out the long form of a commmit message in the command line. Want to make sure i understand how the built in VIm editor is goign to behave.
